@@ -1,0 +1,647 @@
+id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+name: Pulmonary Fibrosis Diagnostic Platform
+type: 1
+canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+blocks:
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Extracts medical entities (symptoms, findings, medications, procedures)
+    and numerical measurements from clinical notes using regex patterns and NLP preprocessing
+  height: 1000
+  id: 069f3de5-6514-43d8-bf76-b9db0f672b23
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: clinical_notes_preprocessing
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 13200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: "Implements 5-fold cross-validation and performance evaluation for\
+    \ multimodal FVC prediction model using MAE, RMSE, R\xB2, and Laplace metrics"
+  height: 1000
+  id: 1e697ca9-21d4-40ae-9e45-a1a85634ab0e
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: training_validation_pipeline
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 13200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Builds frontend UI with Kaggle Dataset Manager dashboard including
+    HTML templates, Zerve-styled CSS, and JavaScript for interactive dataset download,
+    file preview, and statistics functionality.
+  height: 1000
+  id: 25b47dbb-d720-49d2-90f1-1721a0e0f9ad
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: build_html_frontend
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 0
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Analyzes FVC decline patterns across pulmonary fibrosis patients with
+    statistics, decline rates, and visualizations by demographics
+  height: 1000
+  id: 2cd7f065-611a-47e0-89d8-f139efd6e7d2
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: fvc_progression_analysis
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 4400
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Defines CT scan preprocessing pipeline with Hounsfield normalization,
+    lung windowing, and 8 augmentation techniques for medical imaging AI
+  height: 1000
+  id: 373f3752-d851-4e55-82ed-b507e70b426a
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: ct_imaging_preprocessing
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 10200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Creates DataService class for file operations including preview, statistics,
+    and file listing for CSV, Excel, JSON, and Parquet formats
+  height: 1000
+  id: 405fc3f5-f1ea-4722-b504-46c037078db4
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: implement_data_service
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 0
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Defines and compares three BERT-based encoders (ClinicalBERT, BioBERT,
+    PubMedBERT) for converting clinical notes to embeddings
+  height: 1000
+  id: 42d62b42-04a2-4df3-ab3b-6731e719c19c
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: clinical_bert_text_encoder
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 13200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: 'Visualizes multimodal AI predictions for pulmonary fibrosis: risk
+    distribution, FVC progression with confidence intervals, modality importance,
+    and clinical metrics across 176 patients'
+  height: 1000
+  id: 50d3179d-4b08-4daf-b651-b2965dc6c2fe
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: clinical_decision_support_dashboard
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 17400
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: 'Summarizes three validated multimodal encoders: Dense MLP (128-dim
+    lab embeddings), EfficientNet-B0 CNN (512-dim CT embeddings), and ClinicalBERT
+    (768-dim text embeddings) with 117M total parameters ready for fusion'
+  height: 1000
+  id: 68e0baa7-e2d3-45c6-9a52-0f87961c1f7d
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: multimodal_encoder_summary
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 13200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Creates mock OSIC pulmonary fibrosis dataset with 176 patients' FVC
+    measurements, demographics, and temporal progression data
+  height: 1000
+  id: 6e44c061-d100-4482-b8ac-370fd4a0bd4f
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: load_osic_data
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 3000
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: 'Summarizes complete multimodal fusion model with 3 encoders, training
+    config, validation metrics (MAE: 2.068 ml/week), and deployment readiness'
+  height: 1000
+  id: 7a945e0d-6f7e-48f6-a293-7088d143a3db
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: complete_implementation_summary
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 13200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: "Builds and validates a 4-layer MLP encoder (6\u2192256\u2192512\u2192\
+    256\u2192128 units) with BatchNorm and Dropout that transforms normalized clinical\
+    \ lab features into dense 128-dimensional embeddings for multimodal model training"
+  height: 1000
+  id: 7fdbc2b4-60bf-461b-ad76-d663f09e99f2
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: dense_encoder_structured_features
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 8600
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Generates comprehensive exploratory data analysis report with summary
+    statistics, clinical findings, and 6-panel dashboard visualization for pulmonary
+    fibrosis dataset
+  height: 1000
+  id: 879b6305-cc03-464e-8b20-d6bf123085bd
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: comprehensive_summary_report
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 7200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Analyzes patient demographics including age, sex, and smoking status
+    with detailed statistics and 4-panel visualizations
+  height: 1000
+  id: 8c8682ef-4776-49b0-8290-025370f7adac
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: patient_demographics_analysis
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 3000
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Cleans OSIC pulmonary fibrosis lab data with missing value handling,
+    outlier detection, and creates engineered features including baseline FVC, decline
+    rates, and categorical encodings with StandardScaler normalization
+  height: 1000
+  id: 928ca088-391a-45bc-9113-f226da6dbf15
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: laboratory_data_preprocessing
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 8600
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Creates KaggleService class with secure credential handling, dataset
+    download with auto-unzip, and list datasets functionality
+  height: 1000
+  id: 9cad3552-4374-40d9-a5e5-09d679b81b02
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: implement_kaggle_service
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 0
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Simulates federated learning across 4 hospitals, partitions multimodal
+    FVC data, trains with differential privacy & secure aggregation over 10 communication
+    rounds, and visualizes convergence metrics
+  height: 1000
+  id: bc2a1a2d-9efb-4239-b822-d2d0dd413834
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: federated_learning_simulation
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 14600
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Defines and validates ResNet50 & EfficientNet-B0 CNN architectures
+    for encoding grayscale CT scans into 512-dimensional embeddings with parameter-efficient
+    design
+  height: 1000
+  id: c39c54ce-4a9f-467a-bbd7-a51a1764bcb9
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: cnn_image_encoder
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 10200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Creates FastAPI endpoints for Kaggle dataset download, file preview,
+    and statistics analysis with Pydantic validation and error handling
+  height: 1000
+  id: c46fbf34-3fe5-4e79-9fd6-84e77c347b61
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: implement_fastapi_endpoints
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 0
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Creates FastAPI prediction endpoints with Pydantic request/response
+    models, input validation, and support for single/batch FVC decline predictions
+    with optional CT image uploads and confidence intervals.
+  height: 1000
+  id: c8a9488d-e20e-41db-8743-3f83fc018dec
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: fastapi_prediction_endpoints
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 14000
+  y: 16000
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Sets up FastAPI project structure with directories, configuration files,
+    static assets, and sample endpoints
+  height: 1000
+  id: d78bf3b5-0a2a-4bca-bfdc-3b0bd04ea915
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: setup_fastapi_structure
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Designs attention-based multimodal fusion architecture combining lab
+    (128-dim), CT (512-dim), and clinical text (768-dim) embeddings with 4-head cross-modal
+    attention for FVC prediction
+  height: 1000
+  id: da04282b-0775-4b38-b9c3-10af829767be
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: multimodal_fusion_architecture
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 13200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Summarizes multimodal preprocessing pipelines (CT, clinical text, lab
+    data) with feature engineering metrics and model-ready output formats for pulmonary
+    fibrosis diagnosis
+  height: 1000
+  id: e0d6f1cc-8d2f-447f-851b-4f3f7348b3e3
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: multimodal_integration_summary
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 13200
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Builds reusable inference service class for FVC decline predictions
+    from multimodal patient data (lab, CT images, clinical notes)
+  height: 1000
+  id: e4cd1704-63e8-4c0a-b38d-17948e7f9172
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: model_inference_service
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 16000
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Analyzes missing values by column and temporal measurement patterns
+    including intervals between visits, study durations, and patient cohort distribution
+    across study phases with visualizations.
+  height: 1000
+  id: ee118108-6b86-469c-9a6e-0e6e77aca4c6
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: missing_data_temporal_analysis
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 5800
+- auto_size: false
+  canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Generates comprehensive documentation and verifies all API implementation
+    files (README, QUICKSTART, services, routers, config)
+  height: 1000
+  id: f4252d8d-64c8-4049-aaf2-9a38f587f779
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  name: create_verification_and_docs
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 0
+edges:
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 090c2ba2-711a-4c8f-836c-14ef78725c0e
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: f4252d8d-64c8-4049-aaf2-9a38f587f779
+  target: 25b47dbb-d720-49d2-90f1-1721a0e0f9ad
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 1c489363-193c-4940-ad0b-9cfd04018c86
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 68e0baa7-e2d3-45c6-9a52-0f87961c1f7d
+  target: da04282b-0775-4b38-b9c3-10af829767be
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 2dafd625-7813-4199-add6-3045e4393ab6
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 1e697ca9-21d4-40ae-9e45-a1a85634ab0e
+  target: 7a945e0d-6f7e-48f6-a293-7088d143a3db
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 2dcf8c2f-3bbe-48b2-8a7c-21f1a112a45d
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: d78bf3b5-0a2a-4bca-bfdc-3b0bd04ea915
+  target: 9cad3552-4374-40d9-a5e5-09d679b81b02
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 3187a0c0-5bee-48bc-a68d-a26753872d8b
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 069f3de5-6514-43d8-bf76-b9db0f672b23
+  target: 42d62b42-04a2-4df3-ab3b-6731e719c19c
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 31a6b668-cc2f-4d2d-a61a-8d1d6feb8597
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 405fc3f5-f1ea-4722-b504-46c037078db4
+  target: c46fbf34-3fe5-4e79-9fd6-84e77c347b61
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 41fbc945-4668-4617-a717-d48e2cdad56f
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 6e44c061-d100-4482-b8ac-370fd4a0bd4f
+  target: 50d3179d-4b08-4daf-b651-b2965dc6c2fe
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 4666ee7a-ab2d-48ea-99ed-b6136bcdf4de
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 1e697ca9-21d4-40ae-9e45-a1a85634ab0e
+  target: bc2a1a2d-9efb-4239-b822-d2d0dd413834
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 607cb6d4-5d52-4378-8b80-c2cc337062b2
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 373f3752-d851-4e55-82ed-b507e70b426a
+  target: c39c54ce-4a9f-467a-bbd7-a51a1764bcb9
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 6480c7c7-9987-4d48-9fea-f1e7ab65f78b
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 1e697ca9-21d4-40ae-9e45-a1a85634ab0e
+  target: e4cd1704-63e8-4c0a-b38d-17948e7f9172
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 75678a46-a452-4475-9071-13a0311372ba
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 1e697ca9-21d4-40ae-9e45-a1a85634ab0e
+  target: 50d3179d-4b08-4daf-b651-b2965dc6c2fe
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 7e6d32f9-50f6-447f-bfbc-86a633faefc3
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: da04282b-0775-4b38-b9c3-10af829767be
+  target: 1e697ca9-21d4-40ae-9e45-a1a85634ab0e
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 7e8aa4a6-fac9-4479-a6fa-a2ee3e2d9aa3
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 6e44c061-d100-4482-b8ac-370fd4a0bd4f
+  target: ee118108-6b86-469c-9a6e-0e6e77aca4c6
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 7f1bdac5-4bc0-4175-9aad-9c11265d2ffd
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 7fdbc2b4-60bf-461b-ad76-d663f09e99f2
+  target: 68e0baa7-e2d3-45c6-9a52-0f87961c1f7d
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 89fc89a4-b696-489e-b8d8-602cf414eaa8
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 6e44c061-d100-4482-b8ac-370fd4a0bd4f
+  target: 928ca088-391a-45bc-9113-f226da6dbf15
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: 9a8a129e-0a4e-4eaf-bc43-023651402116
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 6e44c061-d100-4482-b8ac-370fd4a0bd4f
+  target: 2cd7f065-611a-47e0-89d8-f139efd6e7d2
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: a03ca0c5-28ab-4eda-a8fc-d2b8716e86eb
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 6e44c061-d100-4482-b8ac-370fd4a0bd4f
+  target: 879b6305-cc03-464e-8b20-d6bf123085bd
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: a4c78619-5c4c-41cf-a451-e421ff84e6a8
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 6e44c061-d100-4482-b8ac-370fd4a0bd4f
+  target: 8c8682ef-4776-49b0-8290-025370f7adac
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: c4152dea-e541-4de9-b3dd-6edfa28770d2
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 928ca088-391a-45bc-9113-f226da6dbf15
+  target: 7fdbc2b4-60bf-461b-ad76-d663f09e99f2
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: d37d9d97-54eb-476c-85b7-706b488d8703
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: c39c54ce-4a9f-467a-bbd7-a51a1764bcb9
+  target: 68e0baa7-e2d3-45c6-9a52-0f87961c1f7d
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: dc761982-ebaa-4b87-95a6-3d2b6b8a2772
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: e4cd1704-63e8-4c0a-b38d-17948e7f9172
+  target: c8a9488d-e20e-41db-8743-3f83fc018dec
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: e288705a-db9a-427d-8b62-d0f41bc7847e
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 069f3de5-6514-43d8-bf76-b9db0f672b23
+  target: e0d6f1cc-8d2f-447f-851b-4f3f7348b3e3
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: e3ae80ce-9a31-4b76-9721-b3d3e6dc7380
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 928ca088-391a-45bc-9113-f226da6dbf15
+  target: e0d6f1cc-8d2f-447f-851b-4f3f7348b3e3
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: e45961fe-ce41-4d36-a43c-166b6284ff6c
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 373f3752-d851-4e55-82ed-b507e70b426a
+  target: e0d6f1cc-8d2f-447f-851b-4f3f7348b3e3
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: e918b06b-be71-4476-8fa1-6d7580432c2f
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 42d62b42-04a2-4df3-ab3b-6731e719c19c
+  target: 68e0baa7-e2d3-45c6-9a52-0f87961c1f7d
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: ee2ed633-58a0-4fa5-b84c-a101c64f8c8f
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: c46fbf34-3fe5-4e79-9fd6-84e77c347b61
+  target: f4252d8d-64c8-4049-aaf2-9a38f587f779
+- canvas_id: 2290a558-7767-458c-bb1a-69c038cc85b7
+  id: f6cad6d3-b568-4c7d-8f45-1991125e5011
+  layer_id: 7f29796b-bcb5-45ef-8e5e-c352f51b6f35
+  source: 9cad3552-4374-40d9-a5e5-09d679b81b02
+  target: 405fc3f5-f1ea-4722-b504-46c037078db4
